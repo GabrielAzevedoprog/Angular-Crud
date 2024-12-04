@@ -1,15 +1,12 @@
 <div class="container my-5">
+  
   <!-- Título -->
   <h1 class="text-center mb-4">Criar Nova Postagem</h1>
-
-  <!-- Botão Voltar -->
-  <div class="text-center mb-4">
-    <a routerLink="/post/index" class="btn btn-secondary">Voltar</a>
-  </div>
 
   <!-- Formulário -->
   <div class="d-flex justify-content-center">
     <form [formGroup]="form" (ngSubmit)="submit()" class="w-50">
+      
       <!-- Campo Título -->
       <div class="form-group mb-3">
         <label for="title" class="form-label">Título:</label>
@@ -43,9 +40,10 @@
         </div>
       </div>
 
-      <!-- Botão Enviar -->
-      <div class="text-center">
-        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Enviar</button>
+      <!-- Botões -->
+      <div class="text-center mb-4">
+        <a routerLink="/post/index" class="btn btn-secondary me-2">Voltar</a>
+        <button class="btn btn-primary" id="enviar" type="submit" [disabled]="!form.valid">Enviar</button>
       </div>
     </form>
   </div>
